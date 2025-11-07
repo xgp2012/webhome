@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灯塔风雨工作室 - 旗下网站导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .link-card {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+        
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        }
+        
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: #3b82f6;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #f8fafc;
+        }
+        
+        .card-desc {
+            color: #94a3b8;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .card-arrow {
+            align-self: flex-end;
+            margin-top: 15px;
+            color: #3b82f6;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .link-card:hover .card-arrow {
+            transform: translateX(5px);
+        }
+        
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+            text-align: center;
+        }
+        
+        .friend-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .friend-link {
+            color: #94a3b8;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .friend-link:hover {
+            color: #3b82f6;
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .friend-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">灯塔风雨工作室</h1>
+            <p class="subtitle">专注于高品质数字产品设计与开发，以创新技术点亮前行之路</p>
+        </header>
+        
+        <main>
+            <div class="links-grid">
+                <div class="link-card" onclick="window.open('https://example.com/design', '_blank')">
+                    <div class="card-icon">🎨</div>
+                    <h3 class="card-title">设计工作室</h3>
+                    <p class="card-desc">探索我们的设计理念与案例，体验创新视觉解决方案</p>
+                    <div class="card-arrow">→</div>
+                </div>
+                
+                <div class="link-card" onclick="window.open('https://example.com/tech', '_blank')">
+                    <div class="card-icon">💻</div>
+                    <h3 class="card-title">技术研发中心</h3>
+                    <p class="card-desc">深入了解我们的技术栈与开发流程，感受前沿科技力量</p>
+                    <div class="card-arrow">→</div>
+                </div>
+                
+                <div class="link-card" onclick="window.open('https://example.com/blog', '_blank')">
+                    <div class="card-icon">📝</div>
+                    <h3 class="card-title">技术博客</h3>
+                    <p class="card-desc">阅读最新技术文章与行业见解，与我们的团队一起成长</p>
+                    <div class="card-arrow">→</div>
+                </div>
+                
+                <div class="link-card" onclick="window.open('https://example.com/cases', '_blank')">
+                    <div class="card-icon">🚀</div>
+                    <h3 class="card-title">项目案例</h3>
+                    <p class="card-desc">查看我们为各行业客户打造的成功项目与解决方案</p>
+                    <div class="card-arrow">→</div>
+                </div>
+                
+                <div class="link-card" onclick="window.open('https://example.com/about', '_blank')">
+                    <div class="card-icon">👥</div>
+                    <h3 class="card-title">关于我们</h3>
+                    <p class="card-desc">认识灯塔风雨工作室的团队成员与我们的企业文化</p>
+                    <div class="card-arrow">→</div>
+                </div>
+                
+                <div class="link-card" onclick="window.open('https://example.com/contact', '_blank')">
+                    <div class="card-icon">📞</div>
+                    <h3 class="card-title">联系我们</h3>
+                    <p class="card-desc">获取我们的联系方式，开启您的项目合作与咨询</p>
+                    <div class="card-arrow">→</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3 class="footer-title">友情链接</h3>
+            <div class="friend-links">
+                <a href="https://example1.com" class="friend-link" target="_blank">创新科技联盟</a>
+                <a href="https://example2.com" class="friend-link" target="_blank">数字艺术社区</a>
+                <a href="https://example3.com" class="friend-link" target="_blank">前端开发者</a>
+                <a href="https://example4.com" class="friend-link" target="_blank">设计思维</a>
+                <a href="https://example5.com" class="friend-link" target="_blank">科技前沿资讯</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 灯塔风雨工作室 版权所有
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 添加点击效果
+        document.querySelectorAll('.link-card').forEach(card => {
+            card.addEventListener('mousedown', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            card.addEventListener('mouseup', function() {
+                this.style.transform = '';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
